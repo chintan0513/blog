@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="connect.js"></script>
+    <script src="https://kit.fontawesome.com/980b7a1905.js" crossorigin="anonymous"></script>
+    <style>
+        span img{
+            float: right; position: relative; right: 100px; top: 28px; cursor: pointer;
+        }
+        span p {
+            color: rgb(70, 70, 70); margin-left: 80px; margin-right: 80px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="nav container-fluid">
+        <div class="links text-center">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Nation</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Conact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="container">
+        <span>
+            <img src="assets/featured3.png" alt="photo">
+            <p class="pt-5">
+                <strong><em>MEMBER FEATURE STORY</em></strong>
+                <br>
+                <br>
+                <p>No, That’s Not How You Say It</p>
+                <p>A short personal history of my favorite fast food</p>
+                <div style="display:inline">
+                    <input type="image" src="assets/like.png" alt="like" id="like_button" class="nodetails">
+                    <input type="image" src="assets/dislike.png" alt="like" id="dislike_button" class="nodetails">
+                    <div id="totalviews"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <p><span style="font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important; font-weight: bolder!important;">I</span>ndians talk funny. We don’t think we do, but we do. We’re usually too busy talking at or over or directly through each other to notice. Every so often, though, we stop long enough to listen to one another and then laugh and point.</p>
+                <p>The middle-aged Persian woman I hired to teach me how to drive made fun of me when I mispronounced Cahuenga Boulevard. I had just moved to Mumbai a few months prior from Yamunotri, where I considered myself a native despite the disagreements of many native Mumbaikars. Frank Lloyd Wright once said, “tip the world over on its side and everything loose will land in Mumbai.” So I floated across the country — as millions before me had — to seek my fortune.</p>
+                <p>Her teaching method was an unorthodox form of politically incorrect mockery. When I tapped the brakes too hard, she’d tell me not to drive like a “Chinaman” and then pantomimed her head flinging back and forth, as if she were bowing. She casually informed me that Mumbaikars were notoriously terrible at changing lanes. Don’t get her started on Indians. Seriously, don’t. She was, to be charitable, racially insensitive.</p>
+                <p>I was a stranger in her city but my advanced age and inexperience amused her. How could a grown man not know how to drive a car? It was, however, my accent that intrigued her the most. I spoke with the faintest southern drawl but I also had northeastern motormouth tendencies. She was always drawing conclusions as to my ethnicity.</p>
+                <p>During one lesson she said, “You people are good drivers.”</p>
+                <p>You people?</p>
+                <p><em>“Mumbaikars.”</em></p>
+                <p>Because of her I passed my driver’s test, got my first license to operate a motor vehicle, and then proceeded to not drive for years. Everything I needed was in walking distance: my job and places to eat.</p>
+                <p>Here’s the truth about food in India: it’s pretty good. There’s amazing pho and pupusas and bulgogi. During my three year internment in the city of Mumbai, I was able to find satisfactory replacements for my beloved street foods. I found some decent pizza. I even found bagels that… sufficed. But I could never find the one dish that reminded me of my adopted home for the previous 16 years. A gyro platter.</p>    
+                <p>I couldn’t even find a suitable Mumbai-style Greek diner, the kind of greasy spoon with a massive menu where you can order a meal of waffles, meatloaf, and lasagna if you want.</p>
+                <p>But it’s not as if Mumbai has no roast meat sandwiches. My racist — but friendly — driving instructor had once pointed out an Armenian restaurant that she recommended. This place served up delicious chicken shawarma sandwiches and a garlic sauce I could eat with my fingers.</p>
+                <p>Eventually, I would drift back to Mumbai. The first thing I would order upon my return? A gyro, a word that rhymes with “pie-whoa.”</p>   
+              </p>
+        </span>
+        <hr>
+
+        <footer class="container-fluid text-center">
+            <div class="link pt-3">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Newsltter</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <p class="pt-3">FOLLOW US ON </p>
+            <div class="text-white text-center">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google"></i>
+                <i class="fas fa-rss"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+            <p class="pt-3 pb-5">Copyright © 2019 <span> Suven Consultants and technology pvt ltd </span>All rights reserved</p>
+        </footer>
+        <script>
+            $(document).ready(function(){
+    
+    
+    $('#like_button').click(function insert_like() {
+      $.ajax({
+        type: 'post',
+        url: 'count.php',
+        data: {
+          post_like: "like"
+        },
+    
+        success: function(response) {
+          $('#totalvotes').slideDown(50);
+          $('#totalvotes').html(response);
+    
+        }
+      });
+    });
+    
+    
+    $('#dislike_button').click(function insert_dislike() {
+      $.ajax({
+        type: 'post',
+        url: 'count.php',
+        data: {
+          post_dislike: "dislike"
+        },
+    
+        success: function(response) {
+          $('#totalvotes').slideDown(50);
+          $('#totalvotes').html(response);
+    
+        }
+      });
+    });
+    
+    });
+    
+        </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>

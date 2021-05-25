@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: rgb(163, 163, 163);
+}
+nav {
+    margin: 10px;   
+}
+nav img {
+    position: absolute;
+    right: 25px;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    width: 30px;
+}
+nav h2 {
+    font: 70px bold;
+}
+nav input{
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+nav button {
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.nav {
+    background: rgb(68, 67, 67);
+    margin: 10px;
+}
+.links ul {
+    list-style: none;
+    display: inline-flex;
+    padding-top: 100px;
+    position: relative;
+    left: 50%;
+}
+.links a{
+    text-decoration: none;
+    padding: 10px;
+    color: beige;
+    font-weight: bold;
+    align-items: center;
+    margin: 10px;
+    background: rgb(58, 56, 56);
+}
+a:hover {
+    color: cyan;
+}
+hr {
+    border: 5px solid rgb(210, 211, 210);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+}
+.intro {
+    margin: 0 auto;
+    background-color: rgb(192, 185, 185);
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.intro h2{
+    font-size: 32px;
+}
+.intro p {
+    font-family: Georgia, Times, Times New Roman, serif;
+    font-weight: normal;
+    color: rgb(93, 93, 93);
+    cursor: pointer;
+}
+.intro a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.intro a:hover{
+    color: cyan;
+}
+footer {
+    background: rgb(58, 56, 56);
+    color: beige;
+    font-weight: bold;
+}
+footer.link a, .link a{
+    text-decoration: none;
+    padding: 10px;
+    color: beige;
+    font-weight: bold;
+    align-items: center;
+    margin: 10px;
+}
+footer a:hover{
+    color: cyan;
+}
+footer i {
+    color: white;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 0;
+}
+footer  .fa-facebook-f{
+    background: darkblue;
+}
+footer .fa-twitter{
+    background: lightskyblue;
+}
+footer .fa-google{
+    background: rgb(187, 43, 43);
+}
+footer .fa-rss{
+    background: orange;
+}
+footer .fa-youtube{
+    background: red;
+}
+footer span:hover {
+    color: cyan;
+}
+.header a{
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+.d-flex a{
+    background: rgb(58, 56, 56);
+    border-radius: 5px;
+}
+.para h1 {
+    margin-top: 40px;
+    margin-left: 75px;
+    letter-spacing: -2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 59px;
+    margin-right: 400px;
+    font-weight: bold;
+}
+.para img{
+    margin: 80px 100px 0px 100px;
+}
+main h2 {
+    margin-top: 40px;
+    margin-left: 75px;
+    letter-spacing: -2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 59px;
+    font-weight: bold;
+}
+#like_button{
+    margin-left: 77px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+#dislike_button {
+    margin-left: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: 4px;
+    background-color: white;
+    cursor: pointer;
+}
